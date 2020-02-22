@@ -1,0 +1,89 @@
+<!-- Nicole Furlage   modified Feb 21, 2020 -->
+<!doctype html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Corben&display=swap" rel="stylesheet">
+
+  <script>
+    function displayImg( x )
+    { if ( x == 1 )
+        { document.getElementById( "slide" ).src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Acer_diabolicum_9_%28medium_crop%29.jpg/320px-Acer_diabolicum_9_%28medium_crop%29.jpg"; }
+      else if ( x == 2 )
+        { document.getElementById( "slide" ).src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Delos_Museum_Mosaik_Dionysos_09.jpg/240px-Delos_Museum_Mosaik_Dionysos_09.jpg"; }
+      else
+        { document.getElementById( "slide" ).src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg/800px-CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg"; }
+    }
+  </script>
+
+  <style>
+    body {
+          background-color: MistyRose;
+    }
+    div {
+          margin: auto;
+          width: 23em;
+          height: 5em;
+          background-color: Snow;
+          border-radius: 12px;
+          border: 2px dotted RosyBrown;
+          padding: 1px 1px;
+    }
+    div.imgBox {
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        background-color: Snow;
+        border: 2px dotted RosyBrown;
+        border-radius: 14px 90px;
+        width: 500px;
+        height: 300px;
+        padding: 50px 50px;
+    }
+    button {
+          background-color: RosyBrown;
+          border: none;
+          border-radius:  3px 14px;
+          color: Snow;
+          padding: 5px 35px;
+          text-align: center;
+          font-size: 20px;
+          transition-duration: 0.7s;
+          margin: 14px 20px;
+          font-family: 'Corben';
+          box-shadow: 4px 4px 8px #a88a8a;
+    }
+    button:hover {
+          background-color: Snow;
+          border: none;
+          border-radius: 3px;
+          color: RosyBrown;
+          box-shadow: 2px 2px 2px #a88a8a;
+    }
+    img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          height: 300px;
+          box-shadow: 0 4px 8px 0 #a88a8a, 0 6px 20px 0 #a88a8a;
+    }
+
+  </style>
+
+</head>
+
+  <body>
+
+    <div class = "imgBox" >
+      <img id = "slide" >
+    </div>
+
+    <div>
+      <button onclick= " displayImg(1) " > 1 </button>
+      <button onclick= " displayImg(2) " > 2 </button>
+      <button onclick= " displayImg(3) " > 3 </button>
+    </div>
+
+  </body>
+
+</html>
