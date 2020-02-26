@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  * {
+	font-family: Arial, sans;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+#container {
+    margin: 0 auto;
+    width: 70%;
+}
+#accordion input {
+	display: none;
+}
+#accordion label {
+	background: #330033;
+	border-radius: .50em;
+	cursor: pointer;
+	display: block;
+	margin-bottom: 3em;
+  text-align: center;
+	padding: .25em 1em;
+	z-index: 20;
+}
+#accordion label:hover {
+	background: #996699;
+}
+
+#accordion input:checked + label {
+	background: #330033;
+	border-bottom-right-radius: 0em;
+	border-bottom-left-radius: 0em;
+	margin-bottom: 0em;
+}
+#accordion article {
+	height:0px;
+	overflow:hidden;
+	z-index:10;
+}
+#accordion article p {
+	padding: 1em;
+}
+#accordion input:checked article {
+}
+#accordion input:checked ~ article {
+	border-bottom-left-radius: .25em;
+	border-bottom-right-radius: .25em;
+	height: auto;
+	margin-bottom: 3em;
+}
+
+body {
+  background-image: url("img.png");
+  background-color: MistyRose;
+  background-repeat: repeat;
+  background-size: 500px;
+  background-blend-mode: hard-light;
+}
+
+table {
+  background-color: #f1baa7;
+  border-collapse: collapse;
+  position:relative;
+  left:8%;
+}
+table, th, td {
+  padding: 10px;
+  text-align: center;
+  border:2px solid #330033;
+  border-left: 5px solid #330033;
+}
+tr:nth-child(1){
+  background-color: #330033;
+}
+tr:hover {
+  background-color: MistyRose;
+}
+ol, ul {
+  text-align:left;
+  margin-left:30px;
+  margin-right:30px;
+  border-left: 5px solid #330033;
+  background-color: #f1baa7;
+  padding: 20px;
+}
+li {
+  margin-left: 10px;
+}
+a:link, a:visited {
+  background-color: #f1baa7;
+  padding:10px;
+  text-align: center;
+  display: inline-block;
+  border: 3px outset #f1baa7;
+  border-radius: 12px;
+}
+a:hover, a:active {
+  background-color: #FFCC99;
+  border: 3px outset #FFCC99;
+}
+h3, th, .header {
+  color:#FFCCCC;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: Georgia, serif;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+a, table, p, li {
+  color:#330033;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.art {
+  background-color: #996699;
+  width: 100%;
+  border: 3px dotted #FFCC99;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+  </style>
+</head>
+
+  <body>
+  	<div id="container">
+      <!-- HEADER -->
+  		<header>
+<h1 class="header" style="text-align:center;font-size:4em"> Nicole Furlage</h1>
+  		</header>
+
+      <!-- ACCORDION -->
+  		<section id="accordion">
+
+        <!-- SECTION 1: CONTACT -->
+  			<div>
+  				<input type="checkbox" id="check-1" />
+  				<label for="check-1"><h3>Contact</h3></label>
+  				<article>
+            <!-- CONTENT -->
+            <div class="art">
+              <img src="asu.png" style="float:right;width:250px;height:60px;padding:5px;">
+              <a href="mailto:nfurlage@asu.edu" target="_blank"> nfurlage@asu.edu </a>
+              <a href="tel:4808454006" target="_blank"> (480)845-4006 </a>
+              <a href="https://goo.gl/maps/ZFp5qomqKV2eZhwj9" target="_blank"> Tooker House, ASU Tempe </a>
+            </div>
+
+          </article>
+  			</div>
+
+        <!-- SECTION 2: OBJECTIVE -->
+  			<div>
+  				<input type="checkbox" id="check-2" />
+  				<label for="check-2"><h3>Objective</h3></label>
+  				<article>
+            <!-- CONTENT -->
+            <div class="art">
+              <p>
+                  Undergrad at ASU Ira Fulton Schools of Engineering
+                  looking to apply my engineering experience, Informatics knowledge,
+                  and technical skills to support the company's growth and success.
+              </p>
+            </div>
+
+        	</article>
+  			</div>
+
+        <!-- SECTION 3: EDUCATION -->
+  			<div>
+  				<input type="checkbox" id="check-3" />
+  				<label for="check-3"><h3>Education</h3></label>
+  				<article>
+            <!-- CONTENT -->
+            <div class="art">
+              <table>
+                <tr>
+                  <th>School</th>
+                  <th>Cert.</th>
+                  <th>Graduation</th>
+                  <th>GPA</th>
+                </tr>
+                <tr>
+                  <td>Williams Field High School</td>
+                  <td>G.E.D.</td>
+                  <td>Graduated 2018</td>
+                  <td>4.00</td>
+                </tr>
+                <tr>
+                  <td>Arizona State University</td>
+                  <td>(Bachelor of Science) Informatics</td>
+                  <td>Anticipated 2022</td>
+                  <td>4.00</td>
+                </tr>
+              </table>
+            </div>
+
+        	</article>
+  			</div>
+
+        <!-- SECTION 4: EXPERIENCE -->
+        <div>
+          <input type="checkbox" id="check-4" />
+          <label for="check-4"><h3>Experience</h3></label>
+          <article>
+            <!-- CONTENT -->
+            <div class="art">
+              <h3 style="text-align:left;margin-left:30px" class="header"> Gemma's Fashion and Sewing -- Receptionist </h3>
+              <ol>
+                <li>Employed 8/2017-6/2018</li>
+                <li>Greeted customers in a professional, courteous manner.</li>
+                <li>Ensured that customer issues were properly and promptly handled, providing excellent customer service.</li>
+                <li>Scheduled and confirmed appointments over the phone, email, and in person.</li>
+                <li>Communicated with customers on general information regarding alteration time requirements, price estimates, and post-alteration care.</li>
+                <li>Coordinated with coworkers to meet the needs of customers as well as manage customer pickup orders.</li>
+              </ol>
+            </div>
+
+          </article>
+        </div>
+
+        <!-- SECTION 5: REFERENCES -->
+        <div>
+          <input type="checkbox" id="check-5" />
+          <label for="check-5"><h3>References</h3></label>
+          <article>
+            <!-- CONTENT -->
+            <div class="art">
+              <ul>
+                <li>Gemma Vigneau -- Employer -- (480)540-1391</li>
+                <li>Alyssa Lim -- Coworker -- (480)111-1234</li>
+                <li>Kevin Pick -- Mentor -- (716)823-2376</li>
+              </ul>
+            </div>
+
+          </article>
+        </div>
+
+  		</section>
+
+    </div>
+</body>
+
+</html>
